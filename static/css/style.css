@@ -20,7 +20,7 @@ html {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column  ;
-    background: url("https://images.unsplash.com/photo-1617801003287-1a71d7792fdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80") top center;
+    background: url("img/img-header.jpeg") top center;
     min-height: 500px;
     height: 100vh;
     background-position: bottom;
@@ -106,6 +106,10 @@ main {
 }
 
 .paralax_images {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
     border-radius: 17px;
     width: 100%;
     max-height: 100vh;
@@ -121,23 +125,23 @@ main {
 }
 
 #first_place {
-    background-image: url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
+    background-image: url("img/india-inteira.jpeg");
 }
 
 #second_place {
-    background-image: url("https://images.unsplash.com/photo-1526392060635-9d6019884377?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("img/machu\ pichu.jfif");
 }
 
 #third_place {
-  background-image: url("https://images.unsplash.com/photo-1509299349698-dd22323b5963?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"); 
+  background-image: url("img/paris.jfif"); 
 }
 
 #forth_place {
-    background-image: url("https://images.unsplash.com/photo-1617869884925-f8f0a51b2374?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("img/tokyo.jfif");
 }
 
 #five_place {
-    background-image: url("https://images.unsplash.com/photo-1621960914176-7a86b243fb8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80");
+    background-image: url("img/australia.jfif");
 }
 
 .btn {
@@ -167,7 +171,33 @@ main {
     margin-top:-8px;
 }
 
+.efeito {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 17px;
+    top: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.efeito {
+    display: none;
+}
+
+.paralax_images:hover .efeito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 @media screen and (min-width: 481px) {
+    
     .paralax_images {
         height: 60%;
     }
@@ -178,7 +208,6 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-
     .paralax_images {
         height: 73%;
     }
@@ -204,13 +233,13 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
+
+
     .paralax_images {
-        background-attachment: fixed;
-        background-position: top left;
+        background-attachment: scroll;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
-        z-index: 1;
     }
 
     .display_img {
