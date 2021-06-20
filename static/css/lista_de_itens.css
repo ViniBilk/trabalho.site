@@ -66,6 +66,13 @@ html {
       transition: 0.3s;
   }
 
+  h2 {
+      margin: 0;
+      padding: 10px;
+      font-family: 'Roboto Slab', serif;
+      font-size: 30px;
+  }
+
   .paralax_images {
     justify-content: center;
     align-items: center;
@@ -80,11 +87,12 @@ html {
 }
 
 .box {
+    text-align:  center;
     box-sizing: border-box;
     display: grid;
     padding: 1rem;
     grid-template-columns: 1fr;
-    grid-gap: 2%;
+    grid-gap: 10px;
 }
 
 .itens_display {
@@ -94,45 +102,65 @@ html {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    border-radius: 17px;
 }
 
 
 .items_description {
+    box-sizing: border-box;
     display: none;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #e9e9e9;
+    padding: 2em;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-radius: 17px;
+    line-height: 1.75em;
 }
 
 #primeira {
-    background-image: url("https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("https://gouodonto.com.br/2019/wp-content/uploads/2019/09/tipos-de-cerdas-escova-de-dentes.jpg");
 }
 
 #segunda {
-    background-image: url("https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=968&q=80");
+    background-image: url("https://www.eurodicas.com.br/wp-content/uploads/2018/04/comprar-mala-de-viagem-1.jpg");
 }
 
 #terceira {
-    background-image: url("https://images.unsplash.com/photo-1519498254871-4a391b0f1495?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("https://blog.emania.com.br/wp-content/uploads/2018/04/1-2.jpg");
 }
 
 #quarta {
-    background-image: url("https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fG9iamVjdHN8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-image: url("https://images.unsplash.com/photo-1614267118647-20c5ffa6a6e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 #quinta {
-    background-image: url("https://images.unsplash.com/photo-1617696618050-b0fef0c666af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
 }
 
-table, th, td {
-    border: 1px solid black;
+
+
+th, td {
+    border-bottom: 1px solid #ddd;
   }
 
 td {
     height: 50px;
-
 }
 
 table {
     width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #e9e9e9;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.75em;
 }
 
 .tabela {
@@ -167,11 +195,13 @@ table {
     }
 
     .itens_display {
+        grid-auto-flow: column dense;
         display: grid;
         height: 50vh;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 200px 1fr;
         grid-gap: 20px;
+        grid-auto-flow: initial;
     }
 
     .tabela {
@@ -188,7 +218,40 @@ table {
     
     .items_description {
         display: flex;
-        width: 50%;
-        height: 100px;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .paralax_images {
+        background-attachment: scroll;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #a .paralax_images {
+        grid-column-start: 2;
+    }
+
+    #a .tabela {
+        grid-column-start: 1;
+    }
+
+    #b .paralax_images{
+        grid-column-start: 2;
+    }
+
+    #b .tabela {
+        grid-column-start: 1;
+    }
+
+    #c .paralax_images{
+        grid-column-start: 2;
+    }
+
+    #c .tabela {
+        grid-column-start: 1;
     }
 }

@@ -111,10 +111,8 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     padding: 1rem;
-    background: rgb(250,250,250);
-    background: linear-gradient(180deg, rgba(250,250,250,1) 4%, rgba(113,45,163,1) 96%);
 }
 
 .box h2 {
