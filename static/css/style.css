@@ -217,7 +217,7 @@ main {
 
 @media screen and (min-width: 768px) {
     .paralax_images {
-        height: 73%;
+        height: 60vh;
     }
 
     .display_img {
