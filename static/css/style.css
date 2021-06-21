@@ -251,7 +251,7 @@ main {
     }
 
     .display_img {
-        height: 45vh;
+        height: 50vh;
         display: flex;
         align-items: center;
         margin-top: 10px;
